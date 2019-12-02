@@ -55,9 +55,10 @@ let grammar_ll = [|
     (NonTerminal F, [Terminal B])
 |]
 
-let table = Map.ofList [((S,A),1); ((S,B),1);  ((T,MULT),3); ((T,PLUS),4); ((T,EPS),2);  ((S1,EPS),6); ((S1,MULT),5);  ((S2,EPS),8); ((S2,PLUS),7);  ((F,A),9); ((F,B),10) ]
+let table = [((S,A),1); ((S,B),1);  ((T,MULT),3); ((T,PLUS),4); ((T,EPS),2);  ((S1,EPS),6); ((S1,MULT),5);  ((S2,EPS),8); ((S2,PLUS),7);  ((F,A),9); ((F,B),10) ]
 
-CSCI374.LL1.parser grammar_ll table "b+b";;
+CSCI374.LL1.parse grammar_ll table "b+b";;
+printfn "Done!!!\n"
 
 (* Bottom-up parsing: LR(0)
 
@@ -102,4 +103,4 @@ let goto = [|
     Map.empty;              // 8
 |]
 
-CSCI374.LR0.parser grammar action goto "b+b";;
+CSCI374.LR0.parse grammar action goto "b+b";;

@@ -25,9 +25,10 @@ let grammar = [|
 // Top-down parsing: LL(1)
 
 // LL(1) parse table
-let table = Map.ofList [((S,A),1); ((S,LPAR),2); ((F,A),3)]
+let table = [((S,A),1); ((S,LPAR),2); ((F,A),3)]
 
-CSCI374.LL1.parser grammar table "(a+a)";;
+CSCI374.LL1.parse grammar table "(a+a)";;
+printfn "Done!!!\n"
 
 // Bottom-up parsing: LR(0)
 
@@ -55,4 +56,4 @@ let goto = [|
     Map.empty;              // 8
 |]
 
-CSCI374.LR0.parser grammar action goto "(a+a)";;
+CSCI374.LR0.parse grammar action goto "(a+a)";;

@@ -57,4 +57,3 @@ module LL1 =
         analyse stack (tokenize input)
 
     let parse grammar table input = parser grammar (Map.ofList table) input false
-
