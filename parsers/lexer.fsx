@@ -2,14 +2,41 @@ namespace CSCI374
 
 module Lexer =
 
-    type TOKEN = LPAR | RPAR | PLUS | MINUS | MULT | DIV | A | B | C | INVALID | END | EPS
+    type TOKEN = LPAR | RPAR | PLUS | MINUS | MULT | DIV | A | B | C | INVALID | END | EPS with
+         member this.str =
+             match this with
+             | LPAR -> "("
+             | RPAR -> ")"
+             | PLUS -> "+"
+             | MINUS -> "-"
+             | MULT -> "*"
+             | DIV -> "/"
+             | A -> "a"
+             | B -> "b"
+             | C -> "c"
+             | END -> "$"
+             | EPS -> "ε"
+             | _ ->""
 
-    type RULE = S | F | T | S1 | S2
+    type RULE = S | F | T | S1 | S2 with
+         member this.str =
+             match this with
+             | S -> "S"
+             | F -> "F"
+             | T -> "T"
+             | S1 -> "S1"
+             | S2 -> "S2"
 
     type SYMBOL =
         | Terminal of TOKEN
         | NonTerminal of RULE
-        | Error
+        | Error with
+        member this.str =
+            match this with
+            | Terminal t -> t.str
+            | NonTerminal n -> n.str
+            | Error -> "ERROR"
+
 
     type ACTION =
         | Shift of int

@@ -7,7 +7,7 @@ open CSCI374.Lexer
 (*
 Grammar:
     S -> F
-    S -> ( S  + F )
+    S -> ( S + F )
     F -> a
 
 Use http://zaa.ch/jison/try/usf/ to construct parsetable
