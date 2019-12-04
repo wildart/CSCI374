@@ -20,6 +20,7 @@
 ## [Labs](assignments/)
 - [Lab1: Recursive Functions and Lists](assignments/Lab%201.ipynb)
 - [Lab2: LL(1) Parser](assignments/Lab%202.ipynb)
+- [Lab3: Recursive Data Types](assignments/Lab%203.ipynb)
 
 ## Programs
 
