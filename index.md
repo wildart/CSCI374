@@ -15,6 +15,9 @@
 - [Lexical and Syntax Analysis](https://nbviewer.jupyter.org/github/wildart/CSCI374/blob/main/Lexical%20and%20Syntax%20Analysis.ipynb)
 
 ## F# Functional Programming
+
+Run on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/wildart/CSCI374.git/main)
+
 - [Tutorial](https://nbviewer.jupyter.org/github/wildart/CSCI374/blob/main/F%23%20Tutorial.ipynb)
 - [Functions](https://nbviewer.jupyter.org/github/wildart/CSCI374/blob/main/F%23%20Programming%20-%20Functions.ipynb)
 - [Recursion](https://nbviewer.jupyter.org/github/wildart/CSCI374/blob/main/F%23%20Programming%20-%20Recursion.ipynb)
